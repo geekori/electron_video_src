@@ -13,6 +13,17 @@ maxHeight：窗口允许的最大高度
 x：指定窗口的横坐标
 y：指定窗口的纵坐标
 
+获取窗口的尺寸
+getSize()  返回数组，[0]：width   [1]：height
+设置窗口尺寸
+setSize(wight,height,flag)  flag：true，以动画效果改变尺寸（仅限于Mac OS X）
+获取窗口位置
+getPosition() 返回数组：[0]：x   [1]：y
+设置窗口尺寸
+setPosition(x,y,flag) flag：true，以动画效果改变位置（仅限于Mac OS X）
+
+
+
  */
 
 const {app,BrowserWindow} = require('electron');
