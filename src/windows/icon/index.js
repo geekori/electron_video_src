@@ -6,7 +6,10 @@ const {app,BrowserWindow} = require('electron');
 function createWindow() {
     win = new BrowserWindow({width:400,height:400,icon:'..\\..\\..\\images\\folder.ico'});
     win.loadFile('index.html');
-    win.setIcon('..\\..\\..\\images\\folder1.ico')
+    if(process.platform != 'darwin') {
+        win.setIcon('..\\..\\..\\images\\folder1.ico')
+    }
+
     win.on('closed',()=> {
         console.log('closed');
         win = null;
