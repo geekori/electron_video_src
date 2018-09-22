@@ -15,6 +15,10 @@ showMessageBox(options)
 4. 询问对话框：question
 5. 警告对话框：warning
 
+设置对话框的按钮
+
+
+
  */
 const {app,BrowserWindow} = require('electron');
 function createWindow() {

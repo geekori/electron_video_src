@@ -33,3 +33,12 @@ function onClick_MessageBoxType() {
     options.icon = '../../../images/kt.png';
     label.innerText = dialog.showMessageBox(options);
 }
+
+//  为消息对话框添加多个按钮
+function onClick_MessageBoxMultiButtons() {
+    var options = {};
+    options.title='信息';
+    options.message = '包含多个按钮的消息对话框';
+    options.buttons = ['按钮1','按钮2','按钮3','按钮4','按钮5'];
+    dialog.showMessageBox(options);
+}
