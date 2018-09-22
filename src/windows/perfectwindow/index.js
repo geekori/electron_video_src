@@ -1,5 +1,10 @@
-// 无边框窗口和透明窗口
-
+// 优雅地加载页面
+/*
+1.  创建一个隐藏的窗口
+2.  装载页面
+3.  将ready-to-show事件绑定到窗口上
+4.  在ready-to-show事件中显示窗口
+ */
 const {app,BrowserWindow} = require('electron');
 function createWindow() {
     win = new BrowserWindow({show:false});
