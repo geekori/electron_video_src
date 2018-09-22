@@ -7,6 +7,14 @@ showMessageBox(options)
 设置消息对话框的图标
 
 
+设置消息对话框的类型
+
+1.默认对话框：none
+2. 信息对话框：info
+3. 错误对话框：error
+4. 询问对话框：question
+5. 警告对话框：warning
+
  */
 const {app,BrowserWindow} = require('electron');
 function createWindow() {
