@@ -42,6 +42,16 @@ function onClick_Directory() {
     options.title = '选择目录';  // 设置Windows标题
     options.message = '选择目录';  // 设置Mac的标题
     options.buttonLabel = '选择';
-    options.properties = ['openDirectory'];
+    options.properties = ['openDirectory','createDirectory'];
+    label.innerText = dialog.showOpenDialog(options);
+}
+//  多选（文件和目录）
+function onClick_MultiSelection() {
+    const label = document.getElementById('label');
+    var options = {};
+    options.title = '选择多个文件和目录';  // 设置Windows标题
+    options.message = '选择多个文件和目录';  // 设置Mac的标题
+    options.buttonLabel = '选择';
+    options.properties = ['openFile','createDirectory','multiSelections'];
     label.innerText = dialog.showOpenDialog(options);
 }

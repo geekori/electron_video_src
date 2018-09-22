@@ -29,6 +29,27 @@ options.filters :对象类型的数组
 
 openDirectory
 
+createDirectory  只针对于Mac
+
+打开对话框：选择多个文件和目录
+
+openFile
+openDirectory
+
+multiSelections
+
+如果同时选择多个文件和目录，Mac和Windows的设置方法不同
+
+Mac
+
+如果想同时选择多个文件和目录，需要指定openFile和openDirectory
+
+Windows
+只需要指定openFile，就可以选择文件和目录
+
+如果在Windows下指定了openDirectory，不管是否指定openFile，都只能选择目录。
+
+
 
  */
 const {app,BrowserWindow} = require('electron');
