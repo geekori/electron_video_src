@@ -15,6 +15,11 @@ options：
 5. properties：Array  包含对话框的功能，如打开文件、打开目录、多选等。
 6. message String  对话框标题（Mac OS X）
 
+
+打开对话框：定制对话框
+
+title、buttonLabel、defaultPath
+
  */
 const {app,BrowserWindow} = require('electron');
 function createWindow() {
