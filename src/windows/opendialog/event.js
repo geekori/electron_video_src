@@ -11,6 +11,8 @@ function onClick_CustomOpenFile() {
     const label = document.getElementById('label');
     var options = {};
     options.title = '打开文件';  // 设置Windows标题
+    options.message = '打开我的文件';  // 设置Mac的标题
+    options.buttonLabel = '选择';
     options.properties = ['openFile'];
     label.innerText = dialog.showOpenDialog(options);
 }
