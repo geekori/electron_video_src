@@ -13,7 +13,26 @@ function onClick_CustomOpenFile() {
     options.title = '打开文件';  // 设置Windows标题
     options.message = '打开我的文件';  // 设置Mac的标题
     options.buttonLabel = '选择';
+    options.defaultPath = '/drivers';
     options.properties = ['openFile'];
+    label.innerText = dialog.showOpenDialog(options);
+}
+
+// 选择文件类型
+function onClick_FileType() {
+    const label = document.getElementById('label');
+    var options = {};
+    options.title = '选择文件类型';  // 设置Windows标题
+    options.message = '选择文件类型';  // 设置Mac的标题
+    options.buttonLabel = '选择';
+    options.properties = ['openFile'];
+    options.filters = [
+        {name:'图像文件',extensions:['jpg','bmp','png','gif']},
+        {name:'视频文件',extensions:['mkv','avi','mp4']},
+        {name:'音频文件',extensions:['mp3','wav']},
+        {name:'所有文件（*.*）',extensions:['*']}
+
+    ];
     label.innerText = dialog.showOpenDialog(options);
 }
 

@@ -20,6 +20,11 @@ options：
 
 title、buttonLabel、defaultPath
 
+打开对话框：选择指定类型的文件
+
+options.filters :对象类型的数组
+
+
  */
 const {app,BrowserWindow} = require('electron');
 function createWindow() {
