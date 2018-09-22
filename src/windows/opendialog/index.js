@@ -50,6 +50,9 @@ Windows
 如果在Windows下指定了openDirectory，不管是否指定openFile，都只能选择目录。
 
 
+打开对话框：通过回调函数返回选择结果
+
+
 
  */
 const {app,BrowserWindow} = require('electron');

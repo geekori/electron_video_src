@@ -53,5 +53,28 @@ function onClick_MultiSelection() {
     options.message = '选择多个文件和目录';  // 设置Mac的标题
     options.buttonLabel = '选择';
     options.properties = ['openFile','createDirectory','multiSelections'];
+    //  如果是Mac系统，添加openDirectory属性
+    if(process.platform == 'darwin') {
+        options.properties.push('openDirectory');
+    }
     label.innerText = dialog.showOpenDialog(options);
+}
+
+//  通过回调函数返回选择结果
+function onClick_Callback() {
+    const label = document.getElementById('label');
+    var options = {};
+    options.title = '选择多个文件和目录';  // 设置Windows标题
+    options.message = '选择多个文件和目录';  // 设置Mac的标题
+    options.buttonLabel = '选择';
+    options.properties = ['openFile','createDirectory','multiSelections'];
+    //  如果是Mac系统，添加openDirectory属性
+    if(process.platform == 'darwin') {
+        options.properties.push('openDirectory');
+    }
+    dialog.showOpenDialog(options,(filePaths) => {
+        for(var i = 0; i < filePaths.length;i++) {
+            label.innerText += filePaths[i] + '\r\n';
+        }
+    });
 }
