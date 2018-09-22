@@ -2,8 +2,14 @@
 
 const {app,BrowserWindow} = require('electron');
 function createWindow() {
-    win = new BrowserWindow();
+    win = new BrowserWindow({show:false});
+
     win.loadFile('index.html');
+
+    // ready-to-show
+    win.on('ready-to-show',()=>{
+       win.show();
+    });
 
     win.on('closed',()=> {
         console.log('closed');
