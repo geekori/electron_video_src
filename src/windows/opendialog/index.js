@@ -25,6 +25,11 @@ title、buttonLabel、defaultPath
 options.filters :对象类型的数组
 
 
+打开对话框：选择和创建目录
+
+openDirectory
+
+
  */
 const {app,BrowserWindow} = require('electron');
 function createWindow() {

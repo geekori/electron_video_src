@@ -35,4 +35,13 @@ function onClick_FileType() {
     ];
     label.innerText = dialog.showOpenDialog(options);
 }
-
+//  选择目录
+function onClick_Directory() {
+    const label = document.getElementById('label');
+    var options = {};
+    options.title = '选择目录';  // 设置Windows标题
+    options.message = '选择目录';  // 设置Mac的标题
+    options.buttonLabel = '选择';
+    options.properties = ['openDirectory'];
+    label.innerText = dialog.showOpenDialog(options);
+}
