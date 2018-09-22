@@ -1,19 +1,20 @@
-// 父子窗口
+// 模态窗口
 /*
-1. 子窗口总是在父窗口上面
-2. 如果父窗口关闭，子窗口自动关闭
+模态窗口是指禁用父窗口的子窗口，也就是说，处于模态的子窗口显示后，无法使用父窗口，直到子窗口关闭
 
-子窗口相当于父窗口的悬浮窗口
+1.  模态窗口需要是另外一个窗口的子窗口
+2.  一旦模态窗口显示，父窗口将无法使用
 
-Mac OS X和Windows的父子窗口的区别是在Mac OS X下，移动父窗口，子窗口会随着父窗口移动
-在Windows下子窗口不会移动
+modal = true
  */
 const {app,BrowserWindow} = require('electron');
 function createWindow() {
     //  创建父窗口
     parentWin = new BrowserWindow();
     //  创建子窗口
-    childWin = new BrowserWindow({parent:parentWin,width:100,height:100});
+    childWin = new BrowserWindow({parent:parentWin,width:200,height:200,modal:true});
+
+
     parentWin.loadFile('index.html');
 
     childWin.loadFile('child.html');
