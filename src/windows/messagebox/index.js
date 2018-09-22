@@ -4,6 +4,9 @@
 
 showMessageBox(options)
 
+设置消息对话框的图标
+
+
  */
 const {app,BrowserWindow} = require('electron');
 function createWindow() {
