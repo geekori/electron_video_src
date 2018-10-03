@@ -23,7 +23,13 @@ function createWindow() {
             submenu:[
                 {
                     label:'关于',
-                    role:'about'
+                   // role:'about',  // Only Mac
+                    click:()=>{
+                        var aboutWin = new BrowserWindow({width:300,height:200,parent:win,modal:true});
+                        aboutWin.loadURL('https://www.baidu.com');
+
+                    }
+
                 },
                 {
                     type:'separator'
