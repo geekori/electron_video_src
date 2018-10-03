@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <title>在窗口中嵌入Web页面</title>
+      <script src="event.js"></script>
+
+  </head>
+  <body onload="onLoad()">
+<button onclick="onClick_API()">webview API</button>
+<p/>
+   <webview id="webview1" src="https://geekori.com" style="width:400px; height:300px"></webview>
+  <p/>
+   <webview id="webview2" src="https://geekori.com" style="height:700px" autosize minwidth="600"></webview>
+
+
+   <!--
+     <webview id="webview1" src="./other1.html" style="height:700px" autosize minwidth="600" ></webview>
+     <p/>
+     <webview id="webview2" src="./other2.html" style="height:700px" autosize minwidth="600" nodeintegration></webview>
+     -->
+  </body>
+</html>
