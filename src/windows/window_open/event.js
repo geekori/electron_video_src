@@ -31,6 +31,12 @@ ipcRenderer.send(...)
 ipcMain.on
 
 
+页面来源："谁"使用url打开的新的子窗口。在本例中，"谁"是指index.html所在的域名。
+
+使用eval方法向子窗口传递数据
+
+eval方法用来执行JavaScript代码
+
 
 
  */
@@ -90,13 +96,17 @@ function onClick_SendMessage() {
 function onLoad() {
      window.addEventListener('message',function(e) {
         data.innerText = e.data.name;
+      //  alert(e.origin);
      }) ;
-
 }
-
 function closeWindow() {
     const win = remote.getCurrentWindow();
     ipcRenderer.send('close','窗口已经关闭');
-
     win.close();
+}
+
+function onClick_Eval() {
+    if(win != undefined) {
+        win.eval('data.innerText = "' + data.value + '"');
+    }
 }
