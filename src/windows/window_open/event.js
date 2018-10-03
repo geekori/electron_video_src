@@ -19,6 +19,11 @@ BrowserWindowProxy：可以认为是BrowserWindow的代理类
 2. 让窗口失去焦点状态：blur
 3. 关闭窗口：close
 4. 显示打印对话框：print
+
+窗口之间的交互：最简单的数据传递方式
+
+B.postMessage(data,'*')
+
  */
 //  打开一个子窗口
 function onClick_OpenWindow() {
@@ -56,4 +61,18 @@ function onClick_PrintDialog() {
     if(win != undefined) {
         win.print();
     }
+}
+
+//  将数据传递给子窗口
+function onClick_SendMessage() {
+    if(win != undefined) {
+        //win.postMessage(data.value,'*');
+        win.postMessage({'name':data.value},'*')
+    }
+}
+
+function onLoad() {
+     window.addEventListener('message',function(e) {
+        data.innerText = e.data.name;
+     }) ;
 }
