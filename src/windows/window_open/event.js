@@ -24,7 +24,20 @@ BrowserWindowProxy：可以认为是BrowserWindow的代理类
 
 B.postMessage(data,'*')
 
+从子窗口返回数据
+
+ipcRenderer.send(...)
+
+ipcMain.on
+
  */
+
+const {ipcRenderer,remote} = require('electron');
+const ipcMain = remote.ipcMain;
+
+ipcMain.on('close',(event,str) => {
+   alert(str);
+});
 //  打开一个子窗口
 function onClick_OpenWindow() {
     win = window.open('./child.html','子窗口','width=300,height=200');
@@ -75,4 +88,12 @@ function onLoad() {
      window.addEventListener('message',function(e) {
         data.innerText = e.data.name;
      }) ;
+
+}
+
+function closeWindow() {
+    const win = remote.getCurrentWindow();
+    ipcRenderer.send('close','窗口已经关闭');
+
+    win.close();
 }
