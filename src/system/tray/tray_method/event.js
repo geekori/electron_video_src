@@ -1,7 +1,7 @@
 /*
 托盘方法
 
-
+显示气泡（仅针对于Windows）
  */
 const remote = require('electron').remote;
 const Menu = remote.Menu;
@@ -103,5 +103,12 @@ function onClick_RemoveTray() {
     if(tray != undefined) {
         tray.destroy();
         tray = undefined;
+    }
+}
+
+//  显示气泡（Only Windows）
+function onClick_DisplayBalloon() {
+    if(tray != undefined) {
+        tray.displayBalloon({title:'有消息了',icon:'../../../../images/note.png',content:'软件更新了，\r\n请尽快下载！'});
     }
 }
