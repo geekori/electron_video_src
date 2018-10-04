@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <title>拖拽图像，并显示图像</title>
+
+  </head>
+  <body>
+  <div id="panel" style="background:red;width:50px;height:50px"></div>
+
+  <p/>
+
+  <label>请将图像文件拖动到这个红色区域</label>
+
+  <p/>
+  <img id="image" style="width:auto;height:auto;max-width:300px;max-height:300px"/>
+
+  <script type="text/javascript">
+      panel.ondragover = ()=>{
+          return false;
+      }
+
+      // 放下事件
+      panel.ondrop = (e) => {
+          e.preventDefault();
+          for(let f of e.dataTransfer.files) {
+              image.src = f.path;
+              break;
+          }
+          return false;
+      }
+
+  </script>
+  </body>
+</html>

@@ -85,6 +85,8 @@ function onClick_AddTray()
     tray.on('balloon-closed',()=>{
        log.value += 'balloon-closed\r\n';
     });
+
+    //  气泡的click和closed事件是互斥的，单击气泡只会触发click事件，只有当气泡自己关闭后，才会触发closed事件
 }
 //  设置托盘图标
 function onClick_SetIcon() {
