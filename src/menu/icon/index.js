@@ -9,7 +9,9 @@ png
 
 icon设置图标
 
+图标会按原尺寸显示
 
+16*16
  */
 const electron = require('electron');
 const app = electron.app;
