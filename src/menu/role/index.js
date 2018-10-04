@@ -68,7 +68,24 @@ function createWindow() {
 
         }
     ];
-
+    if(process.platform == 'darwin') {
+        template.unshift({
+            label:'Mac',
+            submenu:[
+                {
+                    label:'关于',
+                    role:'about'
+                },
+                {
+                    label:'开始说话',
+                    role:'startSpeaking'
+                },{
+                  label:'停止说话',
+                    role:'stopSpeaking'
+                }
+            ]
+        })
+    }
     const menu = Menu.buildFromTemplate(template);
     Menu.setApplicationMenu(menu);
     win.on('closed',()=> {
