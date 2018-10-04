@@ -84,6 +84,11 @@ function createWindow() {
                 {
                     label:'单选3',
                     type:'radio'
+                },
+                {
+                    label:'windows',
+                    type:'submenu',
+                    role:'windowMenu'
                 }
             ]
         }
