@@ -70,6 +70,21 @@ function onClick_AddTray()
         textarea.value += '\r\n' + 'drop-text\r\n';
         textarea.value += text;
     })
+
+    //  气泡消息显示事件
+    tray.on('balloon-show',()=>{
+        log.value += 'balloon-show\r\n';
+    })
+
+    //  气泡消息单击事件
+    tray.on('balloon-click',()=>{
+       log.value += 'balloon-click\r\n';
+    });
+
+    // 气泡消息关闭事件
+    tray.on('balloon-closed',()=>{
+       log.value += 'balloon-closed\r\n';
+    });
 }
 //  设置托盘图标
 function onClick_SetIcon() {
