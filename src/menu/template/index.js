@@ -8,6 +8,14 @@ Windows、Linux和Mac OS X
 1. 模板
 
 2. 代码
+
+electron-packager
+
+npm install electron-packager -g
+
+dmg、exe
+
+
  */
 const electron = require('electron');
 const app = electron.app;
@@ -69,6 +77,9 @@ function createWindow() {
             ]}
 
     ];
+    if(process.platform == 'darwin') {
+        //  添加Mac特有的菜单项
+    }
     const menu = Menu.buildFromTemplate(template);
     Menu.setApplicationMenu(menu);
     win.on('closed',()=> {

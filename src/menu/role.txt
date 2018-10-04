@@ -1,0 +1,45 @@
+通用的role
+
+undo
+redo
+cut
+copy
+paste
+pasteAndMatchStyle
+selectAll
+delete
+minimize：最小化当前窗口
+close：关闭当前窗
+quit：退出应用程序
+reload：重新装载当前窗口
+forceReload：重新装载当前窗口（不考虑缓存）
+toggleDevTools：在当前窗口显示开发者工具
+toggleFullScreen：全屏显示当前窗口
+resetZoom：重新设置当前页面的尺寸为最初的尺寸
+zoomIn：将当前页面放大10%
+zoomOut：将当前页面缩小10%
+editMenu：整个”Edit“菜单，包括Undo、Copy等。
+windowMenu：整个"Window"菜单，包括Minimize、Close等。
+下面的角色仅用于Mac OS X系统。
+
+
+Mac OS X独有的role
+
+about：显示”关于“对话框
+hide：隐藏
+hideOthers：隐藏其他应用程序.
+unhide：取消隐藏其他应用程序.
+startSpeaking：开始说话.
+stopSpeaking ：停止说话
+front：映射arrangeInFront动作
+zoom：映射performZoom动作
+toggleTabBar：显示TabBar.
+selectNextTab：选择下一个Tab
+selectPreviousTab：选择前一个Tab
+mergeAllWindows：合并所有的窗口
+moveTabToNewWindow：移动Tab到新的窗口
+window：Window的子菜单
+help：Help的子菜单
+services：Services的子菜单
+recentDocuments：Open Recent菜单的子菜单
+clearRecentDocuments：清除最近打开的文档
