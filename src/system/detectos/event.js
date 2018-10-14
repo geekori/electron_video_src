@@ -2,6 +2,13 @@
 
 // os模块
 
+function addStylesheet(stylesheet) {
+    var head = document.getElementsByTagName('head')[0];
+    var link = document.createElement('link');
+    link.setAttribute('rel','stylesheet');
+    link.setAttribute('href',stylesheet + '.css');
+    head.appendChild(link);
+}
 function labelOS(osName) {
     os_label.innerText = osName;
 }
@@ -13,12 +20,15 @@ function initialize() {
 
     switch(platform) {
         case 'darwin':      // Mac OS X系统
+            addStylesheet('mac');
             labelOS('Mac OS X');
             break;
         case 'linux':       // Linux系统
+            addStylesheet('linux');
             labelOS('linux');
             break;
         case 'win32':       //  Windows系统
+            addStylesheet('windows');
             labelOS('Windows');
             break;
         default:
