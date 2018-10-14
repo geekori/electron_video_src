@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <!--  指定页面编码格式  -->
+  <meta charset="UTF-8">
+  <!--  指定页头信息 -->
+  <title>electron-packager API打包</title>
+  <script src="event.js"></script>
+</head>
+<body onload="onload()">
+    <button onclick="onClick_SelectProject()">选择Electron工程目录</button>
+    <p/>
+    Electron工程目录：<label id="label_source"></label>
+    <p/>
+    <button onclick="onClick_SelectOut()">选择输出目录</button>
+    <p/>
+    输出目录：<label id="label_out"></label>
+    <p/>
+    <label>应用程序名称：</label><input id="appName"/>
+    <p/>
+    <label>asar:</label><input type="checkbox" id ="asar"/>
+    <p/>
+    <label>为哪些操作系统打包</label>
+    <p/>
+    <label>Mac OS X</label><input type="checkbox" id="mac"/>
+    <p/>
+    <label>Windows</label><input type="checkbox" id="windows"/>
+    <p/>
+    <label>Linux</label><input type="checkbox" id="linux"/>
+    <p/>
+    <button onclick="onClick_Package()">打包</button>
+    <p/>
+    <label id="packager_status" style="color:red"></label>
+
+</body>
+</html>
