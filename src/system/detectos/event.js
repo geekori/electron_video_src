@@ -16,7 +16,8 @@ function labelOS(osName) {
 // 页面初始化函数
 function initialize() {
     var os = require('os');
-    var platform = os.platform();
+ //   var platform = os.platform();
+    var platform  = process.platform;
 
     switch(platform) {
         case 'darwin':      // Mac OS X系统

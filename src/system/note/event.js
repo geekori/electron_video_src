@@ -16,7 +16,7 @@ const electron = require('electron');
 const app = electron.remote.app;
 
 function initialize() {
-    let notes = window.localStorage.notes;
+    let notes = window.localStorage['notes'];
     if(!notes) notes = '记录生活的点点滴滴...';
     textarea.value = notes;
 }
